@@ -1,4 +1,4 @@
 ## ElasticSearch Configuration file ##
 
 # Must match the cluster name
-cluster.name: elasticsearch_jtp
+cluster.name: gesto_es

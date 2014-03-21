@@ -1,0 +1,13 @@
+curl -XPOST 'http://localhost:9200/gesto/order' -d '
+{
+   "id": "dce12111-ff67-43cb-bcd1-9b759d65549a",
+   "memberId": "dcdbe135-347c-4808-ac65-54761d157009",
+   "referenceNumber": "0ba91cd3-f0d3-4914-9141-82a06a39fc0e",
+   "captureDate": "2013-12-21T20:22:29.488Z",
+   "locationId": "5239f35b-4f3a-46a4-b768-d09365cab736",
+   "status": 1,
+   "detail": {
+      "amount": 6,
+      "detail": { "itemname": "sandwich" }
+   }
+}'
