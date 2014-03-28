@@ -32,6 +32,7 @@ object Main extends App {
 
 
   if (numMonths > 0) {
+
     /*
       Step #1: Clear index and install mappings
     */
