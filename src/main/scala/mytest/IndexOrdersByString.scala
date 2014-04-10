@@ -12,6 +12,12 @@ import java.util.UUID
  */
 object IndexOrdersByString {
 
+  def indexOrder(indexingMetadata: IndexingMetadata, world: GestoWorld, orderDate: DateTime) = {
+      indexingMetadata.client.sync.execute {
+        index into indexingMetadata.indexName -> "order" doc createDocMap(world, orderDate)
+      }
+  }
+
   def indexOrders(indexingMetadata: IndexingMetadata, world: GestoWorld, range: Seq[DateTime]) = {
     range.foreach(p => {
       indexingMetadata.client.sync.execute {

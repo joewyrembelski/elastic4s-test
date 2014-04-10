@@ -11,6 +11,10 @@ import java.util.UUID
  */
 object IndexOrdersWithFields {
 
+  // TODO: Docs suggest we can use the fields but it doesn't seem to work with the nested objects
+  //       https://github.com/sksamuel/elastic4s/blob/master/guide/index.md
+  //IndexOrdersWithFields.indexOrders(indexingMetadata, world, DataGenerator.dateRange(rangeEnd.minusMonths(3), rangeEnd, "random"))
+
   def indexOrders(indexingMetadata: IndexingMetadata, world: GestoWorld, range: Seq[DateTime]) = {
     val dtf = ISODateTimeFormat.dateTime()
 
